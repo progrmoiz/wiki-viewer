@@ -1,0 +1,129 @@
+.header {
+    height: 70px;
+    position: relative;
+    background: #EEEEEE;
+    box-shadow: 0px -1px 3px 0px black;
+    -webkit-box-shadow: 0px -1px 3px 0px black;
+}
+
+.header__search-wrap {
+    width: 500px;
+    margin: auto;
+    padding: 15px 0;
+}
+
+.header__logo {
+    height: 50px;
+}
+
+.header__brand {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+}
+
+.search__input {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #e3e3e3;
+    font-size: 16px;
+    line-height: 1.2;
+    border-radius: 2px;
+    width: 93%;
+}
+
+.search__input:focus,
+.search__input:active {
+    outline: 0;
+    border-color: #BDBDBD;
+}
+
+.search__button {
+    width: 41px;
+    border: 1px solid #8BC34A;
+    cursor: pointer;
+    height: 41px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #8BC34A;
+    background: url(../images/icons/ic_search_white_24px.svg), #8BC34A;
+    border-color: #8BC34A;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.search__button:focus,
+.search__button:active {
+    outline: 0;
+}
+
+main {
+    padding-top: 40px;
+    z-index: -1;
+    position: relative;
+}
+
+.article-container {
+    width: 700px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.article {
+    padding: 15px;
+    box-shadow: 0px 0px 3px 0px #BDBDBD;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.article--has-thumbnail {
+    padding-left: 115px;
+}
+
+.article__thumbnail {
+    position: absolute;
+    left: 15px;
+}
+
+.article__heading {
+    font-size: 28px;
+    line-height: 1.25em;
+    padding-bottom: 10px;
+}
+
+.search__autocomplete {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 25;
+    display: block;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+}
+
+.aci {
+    line-height: 1.2em;
+    padding: 5px 10px;
+    background: #eeeeee;
+    cursor: pointer;
+    color: #9E9E9E;
+}
+
+.aci strong {
+    font-weight: normal;
+    color: #757575;
+}
+
+.aci:hover {
+    background: #E0E0E0;
+    color: #757575;
+}
