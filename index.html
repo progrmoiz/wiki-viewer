@@ -20,11 +20,7 @@
         <input type="submit" class="search__button" value="S">
         <div class="search__autocomplete">
           <ul>
-            <li class="aci"><strong>fs</strong>u football schedule 2017</li>
-            <li class="aci"><strong>fs</strong>a</li>
-            <li class="aci"><strong>fs</strong>aafas</li>
-            <li class="aci"><strong>fs</strong>afsaafas</li>
-            <li class="aci"><strong>fs</strong>dasdaaafas</li>
+
           </ul>
         </div>
       </form>
@@ -32,17 +28,17 @@
   </header>
   <main class="main-container">
     <section class="article-container">
-      <article id="43325325" class="article animated bounceInUp article--has-thumbnail">
-      <img class="article__thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/G-Eazy_Lollapalooza_2015.JPG/81px-G-Eazy_Lollapalooza_2015.JPG" height="100">
-      <h3 class="article__heading">Quaternion</h3>
-      <p class="article__description">In mathematics, the quaternions are a number system that extends the complex numbers. They were first described by Irish mathematician William Rowan Hamilton in 1843 and applied to mechanics in three-dimensional space. A feature of quaternions is that multiplication of two quaternions is noncommutative.</p>
-      </article>
-      <article id="43325342325" class="article animated bounceInUp">
-      <h3 class="article__heading">Quaternion</h3>
-      <p class="article__description">In mathematics, the quaternions are a number system that extends the complex numbers. They were first described by Irish mathematician William Rowan Hamilton in 1843 and applied to mechanics in three-dimensional space. A feature of quaternions is that multiplication of two quaternions is noncommutative.</p>
-      </article>
+      <p>No result.</p>
     </section>
   </main>
+  <script type="text/template" id="tpl-article">
+      <a href="{{link}}">
+        <article id="{{id}}" class="article animated bounceInUp">
+          <h3 class="article__heading">{{heading}}</h3>
+          <p class="article__description">{{content}}</p>
+        </article>
+      </a>
+  </script>
   <script src="script/app.js"></script>
 </body>
 </html>
