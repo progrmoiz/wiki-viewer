@@ -75,13 +75,22 @@ searchForm.addEventListener('submit', function(e) {
       const g = tplSearch
       .replace('{{id}}', page.pageid)
       .replace('{{heading}}', page.title)
-      .replace('{{content}}', page.extract)
+      .replace('{{content}}', page.extract);
 
       const a = document.createElement('a');
       a.href = `https://en.wikipedia.org/?curid=${page.pageid}`;
       a.title = page.title;
       a.classList.add('al');
-      a.innerHTML = g;
+      a.innerHTML = '';
+
+      if (page.thumbnail) {
+        const img = document.createElement('img');
+        img.src = page.thumbnail.source;
+        img.alt = page.title;
+        a.appendChild(img);
+      }
+
+      a.innerHTML += g;
 
       return a;
     }))
