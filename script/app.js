@@ -1,5 +1,6 @@
 const searchInput = document.querySelector('.js-search-input');
 const searchAuto = document.querySelector('.search__autocomplete > ul');
+const searchForm = document.querySelector('#search-form');
 
 // autocompletion
 let timeout;
@@ -34,6 +35,11 @@ searchInput.addEventListener('keypress', function(e) {
       })
     });
   }, 1000);
+})
+
+searchForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  searchAuto.style.display = 'none';
 })
 
 function queryParams(params) {
