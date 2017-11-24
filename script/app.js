@@ -1,4 +1,5 @@
 const searchInput = document.querySelector('.js-search-input');
+const searchBtn = document.querySelector('.search__button');
 const searchAuto = document.querySelector('.search__autocomplete > ul');
 const searchForm = document.querySelector('#search-form');
 const articles = document.querySelector('.article-container');
@@ -32,7 +33,7 @@ searchInput.addEventListener('keypress', function(e) {
       list.forEach(li => {
         li.addEventListener('click', function(e) {
           searchInput.value = e.target.textContent;
-          // TODO: click search button
+          searchBtn.click();
         })
       })
     });
