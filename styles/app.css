@@ -142,6 +142,7 @@ main {
 /* empty state */
 .empty-state {
     text-align: center;
+    padding-top: 5rem;
 }
 
 .empty-state__title {
