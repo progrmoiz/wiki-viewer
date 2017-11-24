@@ -4,6 +4,7 @@
     background: #EEEEEE;
     box-shadow: 0px -1px 3px 0px black;
     -webkit-box-shadow: 0px -1px 3px 0px black;
+    z-index: 2;
 }
 
 .header__search-wrap {
@@ -118,7 +119,7 @@ main {
 .aci {
     line-height: 1.2em;
     padding: 5px 10px;
-    background: #eeeeee;
+    background: #eee;
     cursor: pointer;
     color: #9E9E9E;
 }

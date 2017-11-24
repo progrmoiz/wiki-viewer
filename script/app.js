@@ -8,6 +8,7 @@ let timeout;
 searchInput.addEventListener('keypress', function(e) {
   // debouncing
   clearTimeout(timeout);
+  searchAuto.style.display = 'block';
   timeout = setTimeout(() => {
     const query = queryParams({
       "action": "opensearch",
