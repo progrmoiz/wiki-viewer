@@ -3,6 +3,8 @@ const searchBtn = document.querySelector('.search__button');
 const searchAuto = document.querySelector('.search__autocomplete > ul');
 const searchForm = document.querySelector('#search-form');
 const articles = document.querySelector('.article-container');
+const emptyState = document.querySelector('.empty-state')
+
 
 // autocompletion
 let timeout;
