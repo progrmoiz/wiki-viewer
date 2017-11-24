@@ -68,7 +68,7 @@
 
 main {
     padding-top: 40px;
-    z-index: -1;
+    z-index: 1;
     position: relative;
 }
 
@@ -98,6 +98,11 @@ main {
     font-size: 28px;
     line-height: 1.25em;
     padding-bottom: 10px;
+    color: black;
+}
+
+.article__description {
+    color: #424242;
 }
 
 .search__autocomplete {
@@ -126,4 +131,8 @@ main {
 .aci:hover {
     background: #E0E0E0;
     color: #757575;
+}
+
+.al {
+    text-decoration: none;
 }
