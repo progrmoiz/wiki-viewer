@@ -1,6 +1,7 @@
 const searchInput = document.querySelector('.js-search-input');
 const searchAuto = document.querySelector('.search__autocomplete > ul');
 const searchForm = document.querySelector('#search-form');
+const articles = document.querySelector('.article-container');
 
 // autocompletion
 let timeout;
@@ -38,8 +39,56 @@ searchInput.addEventListener('keypress', function(e) {
 })
 
 searchForm.addEventListener('submit', function(e) {
+  // prevent from default
   e.preventDefault();
+  // hiding the autocomplete
   searchAuto.style.display = 'none';
+  const query = queryParams({
+    "action": "query",
+    "format": "json",
+    "prop": "extracts|pageimages",
+    "generator": "search",
+    "exchars": "100",
+    "exintro": 1,
+    "explaintext": 1,
+    "exsectionformat": "wiki",
+    "pithumbsize": "100",
+    "gsrsearch": searchInput.value,
+    "gsrnamespace": "0",
+    "gsrlimit": "10",
+    "gsroffset": "0",
+    "origin": "*"
+  });
+  const fetchPromise = fetch(`https://en.wikipedia.org/w/api.php?${query}`);
+  const tplSearch = document.querySelector('#tpl-article').innerHTML;
+
+  fetchPromise
+  .then(res => res.json())
+  .then(json => {
+    // remove previous articles
+    articles.innerHTML = '';
+    return Object.values(json.query.pages);
+  })
+  .then(pages => pages.sort((a, b) => a.index > b.index ? 1 : -1))
+  .then(pages => pages.map(page => {
+      const g = tplSearch
+      .replace('{{id}}', page.pageid)
+      .replace('{{heading}}', page.title)
+      .replace('{{content}}', page.extract)
+
+      const a = document.createElement('a');
+      a.href = `https://en.wikipedia.org/?curid=${page.pageid}`;
+      a.title = page.title;
+      a.classList.add('al');
+      a.innerHTML = g;
+
+      return a;
+    }))
+  .then(pages => {
+    pages.forEach(page => {
+      articles.appendChild(page);
+    })
+  })
 })
 
 function queryParams(params) {
