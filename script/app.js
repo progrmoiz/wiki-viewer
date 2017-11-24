@@ -75,22 +75,27 @@ searchForm.addEventListener('submit', function(e) {
       const g = tplSearch
       .replace('{{id}}', page.pageid)
       .replace('{{heading}}', page.title)
-      .replace('{{content}}', page.extract);
+      .replace('{{content}}', page.extract)
+      .replace('{{has-image}}', page.thumbnail ? 'article--has-thumbnail' : '');
 
       const a = document.createElement('a');
       a.href = `https://en.wikipedia.org/?curid=${page.pageid}`;
       a.title = page.title;
       a.classList.add('al');
-      a.innerHTML = '';
+      a.innerHTML = g;
 
       if (page.thumbnail) {
         const img = document.createElement('img');
         img.src = page.thumbnail.source;
+        img.height = page.thumbnail.height;
+        img.width = page.thumbnail.width >= 90 ? 85 : page.thumbnail.width;
+        img.classList.add('article__thumbnail');
         img.alt = page.title;
-        a.appendChild(img);
-      }
 
-      a.innerHTML += g;
+        var parentNode = a.querySelector('.article');
+        var heading = a.querySelector('.article__heading');
+        parentNode.insertBefore(img, heading);
+      }
 
       return a;
     }))
