@@ -39,6 +39,7 @@ searchInput.addEventListener('keypress', function(e) {
 })
 
 searchForm.addEventListener('submit', function(e) {
+  const [val, pageNum=0] = searchInput.value.split('::');
   // prevent from default
   e.preventDefault();
   // hiding the autocomplete
@@ -53,10 +54,10 @@ searchForm.addEventListener('submit', function(e) {
     "explaintext": 1,
     "exsectionformat": "wiki",
     "pithumbsize": "100",
-    "gsrsearch": searchInput.value,
+    "gsrsearch": val,
     "gsrnamespace": "0",
     "gsrlimit": "10",
-    "gsroffset": "0",
+    "gsroffset": `${pageNum*10}`,
     "origin": "*"
   });
   const fetchPromise = fetch(`https://en.wikipedia.org/w/api.php?${query}`);
