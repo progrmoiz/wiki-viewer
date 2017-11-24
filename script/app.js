@@ -113,3 +113,11 @@ function queryParams(params) {
         .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
         .join('&');
 }
+
+function example(e) {
+  e.preventDefault();
+  searchInput.value = e.target.textContent;
+  searchBtn.click();
+}
+
+document.querySelector('.empty-state__example').addEventListener('click', example);

@@ -137,3 +137,20 @@ main {
 .al {
     text-decoration: none;
 }
+
+
+/* empty state */
+.empty-state {
+    text-align: center;
+}
+
+.empty-state__title {
+    font-size: 2.4em;
+}
+
+.empty-state__desc {line-height: 1.2;}
+
+.empty-state__example {
+    text-decoration: underline;
+    cursor: pointer;
+}

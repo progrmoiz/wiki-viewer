@@ -19,16 +19,18 @@
         <input type="text" name="q" tabindex="1" class="search__input js-search-input" value="" placeholder="Search Wiki" autocomplete="off">
         <input type="submit" class="search__button" value="S">
         <div class="search__autocomplete">
-          <ul>
-
-          </ul>
+          <ul></ul>
         </div>
       </form>
     </div>
   </header>
   <main class="main-container">
     <section class="article-container">
-      <p>No result.</p>
+      <div class="empty-state">
+        <img src="images/icons/ic_search_black_24px.svg" width="150" class="empty-state__image">
+        <h2 class="empty-state__title">Search Wikipedia</h2>
+        <p class="empty-state__desc">Find wiki article, add ::pagenumber in <br>your search e.g. <a class="empty-state__example">Spain::2</a> => Spain page-2, to get more article</p>
+      </div>
     </section>
   </main>
   <script type="text/template" id="tpl-article">
