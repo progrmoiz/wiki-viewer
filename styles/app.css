@@ -24,6 +24,8 @@
     left: 20px;
 }
 
+.header__right {position: absolute;top: 15px;right: 20px;}
+
 /* Form */
 .search {
     width: 100%;
@@ -67,6 +69,20 @@
 .search__button:focus,
 .search__button:active {
     outline: 0;
+}
+
+/* random button */
+.random-wiki {background: #8BC34A;border: 0;outline: 0;padding: 8px 9px;margin: 0;line-height: 24px;border-radius: 2px;font-size: 14px;box-shadow: 1px 1px 1px 0px #9E9E9E;cursor: pointer;color: #fff;}
+
+.random-wiki:before {
+    color: #fff;
+    background: #8BC34A;
+    background: url(../images/icons/ic_lightbulb_outline_white_24px.svg), #8BC34A;
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* Container */
