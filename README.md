@@ -16,7 +16,7 @@ A Wikipedia viewer allows you to search article from wikipedia
 ## Clone the repo
 It is very light weight repo, So recommended starting with cloning the repo
 ```
-git clone TODO
+git clone https://github.com/progrmoiz/wiki-viewer.git
 ```
 
 ## Running the site
