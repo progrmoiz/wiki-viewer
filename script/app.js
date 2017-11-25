@@ -66,7 +66,6 @@ searchForm.addEventListener('submit', function(e) {
   });
   const fetchPromise = fetch(`https://en.wikipedia.org/w/api.php?${query}`);
   const tplSearch = document.querySelector('#tpl-article').innerHTML;
-  console.log(searchInput.value);
 
   // if no search value show empty state
   if (searchInput.value == '') {
