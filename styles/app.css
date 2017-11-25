@@ -50,15 +50,15 @@
 
 .search__button {
     width: 41px;
-    border: 1px solid #8BC34A;
+    border: 1px solid;
     cursor: pointer;
     height: 41px;
     position: absolute;
     right: 0;
     top: 0;
-    background: #8BC34A;
-    background: url(../images/icons/ic_search_white_24px.svg), #8BC34A;
-    border-color: #8BC34A;
+    background: #673AB7;
+    background: url(../images/icons/ic_search_white_24px.svg), #673AB7;
+    border-color: #673AB7;
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -9999px;
@@ -72,12 +72,11 @@
 }
 
 /* random button */
-.random-wiki {background: #8BC34A;border: 0;outline: 0;padding: 8px 9px;margin: 0;line-height: 24px;border-radius: 2px;font-size: 14px;box-shadow: 1px 1px 1px 0px #9E9E9E;cursor: pointer;color: #fff;}
+.random-wiki {background: #673AB7;border: 0;outline: 0;padding: 8px 9px;margin: 0;line-height: 24px;border-radius: 2px;font-size: 14px;box-shadow: 1px 1px 1px 0px #9E9E9E;cursor: pointer;display: block;font-family: sans-serif;color: #fff;text-decoration: none;}
 
 .random-wiki:before {
     color: #fff;
-    background: #8BC34A;
-    background: url(../images/icons/ic_lightbulb_outline_white_24px.svg), #8BC34A;
+    background: url(../images/icons/ic_lightbulb_outline_white_24px.svg);
     content: "";
     width: 24px;
     height: 24px;
