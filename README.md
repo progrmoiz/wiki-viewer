@@ -21,4 +21,4 @@ git clone TODO
 
 ## Running the site
 Open `index.html` directly in your default browser or
-Setup a local server
+Setup a local server, recommended to setup a server.
